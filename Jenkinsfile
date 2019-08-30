@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage("Build Docker image"){
       steps{
-        sh 'docker build -t bmdivakar/demo-java1:1.0'
+        sh 'docker build -t bmdivakar/demo-java1:1.0 .'
       }
     }
     stage("Build and Test"){
