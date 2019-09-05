@@ -18,7 +18,7 @@ pipeline{
         export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
         mvn clean package
         cp ./target/demo.war /usr/local/tomee/webapps/demo.war
-        /usr/local/tomcat/bin/catalina.sh start
+        /usr/local/tomee/bin/catalina.sh start
         '''
         input message:"Test the page and click proceed to continue"
       }
