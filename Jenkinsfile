@@ -15,6 +15,7 @@ pipeline{
       }
       steps{
         sh '''
+        export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
         mvn clean package
         copy ./target/demo.war /usr/local/tomcat/webapps/demo.war
         /usr/local/tomcat/bin/catalina.sh start
